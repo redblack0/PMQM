@@ -1,0 +1,31 @@
+\section{simpleSlides}
+
+% [fragile] is needed for the \verb|...| command to work. It is magic and show
+% it up if you want to know how it works.
+% NOTE: keep in mind that the use of fragile the build time increases
+\begin{frame}[fragile]
+    Change the labels using \verb|\item[label text]| in an
+    \texttt{itemize} environment
+
+    \begin{itemize}
+        \item This is my first point
+        \item Another point I want to make
+        \item[!] A point to exclaim something!
+        \item[$\blacksquare$] Make the point fair and square.
+        \item[NOTE] This entry has no bullet
+        \item[] A blank label?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+    Change the labels using \verb|\item[label text]| in an
+    \texttt{enumerate} environment
+    \begin{enumerate}
+        \item This is my first point
+        \item Another point I want to make
+        \item[!] A point to exclaim something!
+        \item[$\blacksquare$] Make the point fair and square.
+        \item[NOTE] This entry has no bullet
+        \item[] A blank label?
+    \end{enumerate}
+\end{frame}
