@@ -17,26 +17,30 @@
     \end{itemize}
 \end{frame}
 
-\input{simpleSlides/simpleSlides.tex}
-\input{pictureSlides/pictureSlides.tex}
+%\input{simpleSlides/simpleSlides.tex}
+%\input{pictureSlides/pictureSlides.tex}
 
 
-\section{Grundlegende Kennzahlen}
+\section{Konzept}
 \begin{frame}[fragile]
-    Mit Hilfe der berechneten Werte können Prognosen für den weiteren Projektverlauf erstellt werden
+    \frametitle{Die relevantesten Kennzahlen}
+    \Large
     \begin{itemize}
-        \item (PV) Planned Value
-        \item (EV) Earned Value
-        \item (AC) Actual Cost
+        \item[$\blacksquare$] Planning - Vor dem Projekt zu berechnen
+        \begin{itemize}
+            \item (PV)  Planned Value
+            \item (EAC) Estimate at Completion
+        \end{itemize}
+        \item[$\blacksquare$] Controlling - Durchgängig während des Projektes
+        \begin{itemize}
+            \item (EV)  Earned Value
+            \item (AC)  Actual Cost
+        \end{itemize}
     \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-    \begin{center}
-        \LARGE Beispielhafte Plannung
-    \end{center}
+    \frametitle{Beispielhafte Plannung}
     \begin{itemize}
-        \item Geplante Gesamtkosten / Estimate at Completion (EAC)
-        \item[]
         \item Einteilung in Pakete mit Fertigstellungsgraden
         \begin{itemize}
             \item Woche 1 - 10\% Fertigstellungsgrad
@@ -48,6 +52,21 @@
     \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
+    \frametitle{Berechnung der Effizienz}
+    \LARGE
+    \begin{itemize}
+        \item (CPI) Cost Performance Index
+        \begin{center}
+            CPI = EV / AC
+        \end{center}
+        \item[]
+        \item (SPI) Schedule Performance Index
+        \begin{center}
+            SPI = EV / PV
+        \end{center}
+    \end{itemize}
+\end{frame}
+\begin{frame}[fragile]
     \huge
     Frage - Inwieweit oder wie genau kann der Grad entschieden werden?
 \end{frame}
@@ -55,11 +74,56 @@
 
 \section{Prognosen}
 \begin{frame}[fragile]
+    \frametitle{Gesamtkostenprognose}
+    \Large
     Mit Hilfe der berechneten Werte können Prognosen für den weiteren Projektverlauf erstellt werden
+    Hier als Beispiel monetare Kosten zum Projektende
     \begin{itemize}
-        \item Viele Rechnungsmethode sind dabei denkbar
+        \item Verschiedene Rechnungsmethode denkbar
     \end{itemize}
-    Regel: Überschrittenes Budget kann tendenziell nicht wieder ausgeglichen werden
+    Daumenregel: Überschrittenes Budget kann tendenziell nicht wieder ausgeglichen werden
+    \begin{itemize}
+        \item Kosten werden meist minimal abgeschätzt
+    \end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Gesamtkostenprognose}
+    \Large
+    Annahme 1: Der Rest des Projektes verläuft wie \textbf{geplant}
+    \begin{itemize}
+        \item AC + noch geplanten Ausgaben
+    \end{itemize}
+    \bigbreak
+    Annahme 2: Der Rest des Projektes verläuft wie \textbf{bisher}
+    \begin{itemize}
+        \item AC + (noch geplanten Kosten * CPI)
+    \end{itemize}
+    \bigbreak
+    Annahme 3: Durchschnitt der beiden bisherigen Prognosen
+    \begin{itemize}
+        \item (Prognose1 + Prognose2) / 2
+    \end{itemize}
+\end{frame}
+
+
+\section{Verbesserungen}
+\begin{frame}[fragile]
+    \frametitle{Einführung der Earned Schedule}
+    \begin{center}
+        \LARGE
+        SPI = EV / PV
+    \end{center}
+    \Large
+    \begin{itemize}
+        \item SPI nur bedingt aussagekräftig
+        \item Gegen Ende des Projektes läuft SPI gegen 1
+        \begin{itemize}
+            \item Gegen Ende des Projektes sollte \textbf{EV = EAC} sein
+            \item EV läuft unaufhaltbar gegen EAC
+            \item PV läuft unaufhaltbar gegen EAC
+        \end{itemize}
+        \item Informationen wie "zu spät" oder "früher als geplant" gehen verloren
+    \end{itemize}
 \end{frame}
 
 
